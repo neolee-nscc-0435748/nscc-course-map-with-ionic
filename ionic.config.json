@@ -1,0 +1,7 @@
+{
+  "name": "NSCCCourseMapForA4",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
