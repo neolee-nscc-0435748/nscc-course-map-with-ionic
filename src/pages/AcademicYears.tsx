@@ -14,7 +14,12 @@ const AcademicYears: React.FC = () => {
 
   const getAcademicYearsData = async () => {
     return new Promise(async (resolve: (value: AcademicYear[]) => void, reject) => {
-      const response = await axios.get("https://webd3000functions-apim.azure-api.net/webd3000functions/academicyears");
+      const response = await axios.get("https://webd3000functions-apim.azure-api.net/webd3000functions/academicyears",
+      {
+        headers: {
+          'Access-Control-Allow-Origin' : '*'
+        }
+      });
 
       if (response.status === 200) {
         resolve(response.data);
